@@ -1,0 +1,106 @@
+.image-el {
+    width: 100%;
+}
+.image-block-text {
+    width: 511px;
+    border: 2px solid #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    height: 200px;
+}
+.image-box {
+    position: relative;
+}
+.play {
+    width: 64.5px;
+    height: 64.5px;
+    background-color: #6B77E5;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-play {
+    font-size: 30px;
+    color: #fff;
+    /* position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+}
+/* --- */
+.box-wraper {
+    width: 400px;
+    height: 400px;
+    background-color: #6B77E5;
+    position: relative;
+    /* transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    transition-delay: 2s */
+    transition: all 3s linear 2s; 
+    cursor: pointer;
+}
+.child-box {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition: all 2s;
+}
+.box-wraper:hover {
+    background-color: green; 
+}
+.child-box:hover {
+    background-color: aquamarine;
+   transform: translate(-50%,-50%) rotate(0deg);
+}
+/* .box-wraper:hover .child-box {
+    background-color: red;
+} */
+
+
+/* animation */
+.image-car {
+    height: 100px;
+    /* animation-name: carmove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-direction: alternate; */
+    animation: carmove 5s linear infinite 3s alternate;
+    position: absolute;
+}
+.animation-block {
+    position: relative;
+    height: 200px;
+}
+@keyframes carmove{
+    from {left:0;}
+    to {left: 800px;}
+}
+
+
+/* ----- */
+.image-car2 {
+    height: 100px;
+    animation: moveblackcar 6s linear infinite alternate;
+}
+
+@keyframes moveblackcar {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(200px);}
+    50% {transform: translateX(400px);}
+    75% {transform: translateX(600px);}
+    100% {transform: translateX(1000px);}
+}
